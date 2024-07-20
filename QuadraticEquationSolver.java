@@ -2,12 +2,12 @@ public class QuadraticEquationSolver {
 
     public static double[] solve(double a, double b, double c, double delta) {
         if (Math.abs(a) < delta) {
-            throw new IllegalArgumentException("Коэфициент не может быть 0.");
+            throw new IllegalArgumentException("Coefficient a cannot be zero.");
         }
         
         if (Double.isNaN(a) || Double.isNaN(b) || Double.isNaN(c) ||
             Double.isInfinite(a) || Double.isInfinite(b) || Double.isInfinite(c)) {
-            throw new IllegalArgumentException("Неверный коэфициент.");
+            throw new IllegalArgumentException("Invalid coefficients.");
         }
 
         double discriminant = b * b - 4 * a * c;
